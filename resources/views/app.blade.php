@@ -22,18 +22,18 @@
     <div id="app">
         <!--Vue mount element-->
         <div class="header">
-            <div class="header-img"  v-bind:style="headerImageStyle" v-on:click="modalOpen = true">
+            <div class="header-img" :style="headerImageStyle" @click="openModal">
                 <button class="view-photos">View Photos</button>
-
             </div>
         </div>
         <div class="container">
-        <div id="modal" v-bind:class="{ show : modalOpen }">
+
+       <!-- <div id="modal" v-bind:class="{ show : modalOpen }">
             <button v-on:click="modalOpen = false" class="modal-close">&times;</button>
             <div class="modal-content">
                 <image-carousel :images="images"></image-carousel>
             </div>
-        </div>
+        </div> -->
         <div class="heading">
             <h1>@{{ title }}</h1>
             <!--Vue text interpolation-->
@@ -68,6 +68,9 @@
             </div>
         </div>
        </div>
+       <modal-window ref="imagemodal">
+           <image-carousel :images="images"></image-carousel>
+       </modal-window>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

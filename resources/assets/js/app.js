@@ -2,6 +2,7 @@ import "core-js/fn/object/assign";
 import Vue from 'vue';
 import { populateAmenitiesAndPrices } from './helpers';
 import ImageCarousel from '../components/ImageCarousel.vue';
+import ModalWindow from '../components/ModalWindow.vue';
 //import sample from './data';
 
 let model =
@@ -65,9 +66,10 @@ var app = new Vue({ //configuration object
             'background-image': `url(${model.images[0]})`
         },
         contracted: true,
-        modalOpen: false
+        //modalOpen: false
     }),
-    methods: {
+
+    /*methods: {
         escapeKeyListener: function(evt) {
             if (evt.keyCode === 27 && this.modalOpen) {
                 this.modalOpen = false;
@@ -89,8 +91,14 @@ var app = new Vue({ //configuration object
     },
     destroyed: function() {
         document.removeEventListener('keyup', this.escapeKeyListener);
-    },
+    },*/
     components: {
-        ImageCarousel
+        ImageCarousel,
+        ModalWindow
+    },
+    methods: {
+        openModal() {
+            this.$refs.imagemodal.modalOpen = true;
+        },
     }
 });
