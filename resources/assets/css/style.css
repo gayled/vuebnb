@@ -49,10 +49,13 @@ body {
     color: #767676;
 }
 
+
+/*
 hr {
     border: 0;
     border-top: 1px solid #dce0e0;
 }
+*/
 
 .about {
     margin-top: 2em;
@@ -66,6 +69,8 @@ hr {
     white-space: pre-wrap;
 }
 
+
+/*
 .header {
     height: 320px;
 }
@@ -79,7 +84,10 @@ hr {
     cursor: pointer;
     position: relative;
 }
+*/
 
+
+/*
 .list {
     display: flex;
     flex-wrap: nowrap;
@@ -104,6 +112,7 @@ hr {
 .list .list-item>i {
     width: 35px;
 }
+*/
 
 .about p.contracted {
     height: 250px;
@@ -128,11 +137,14 @@ button {
     margin-bottom: 0;
 }
 
+
+/*
 .header .header-img .view-photos {
     position: absolute;
     bottom: 20px;
     left: 20px;
 }
+*/
 
 .about button.more {
     background: transparent;
@@ -241,6 +253,8 @@ body.modal-open {
 }
 */
 
+
+/*
 @media (max-width: 743px) {
     .list .title {
         flex: 1 1 33%;
@@ -251,4 +265,4 @@ body.modal-open {
     .list .list-item {
         flex: 0 0 100%;
     }
-}
+*/

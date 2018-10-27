@@ -3,6 +3,8 @@ import Vue from 'vue';
 import { populateAmenitiesAndPrices } from './helpers';
 import ImageCarousel from '../components/ImageCarousel.vue';
 import ModalWindow from '../components/ModalWindow.vue';
+import HeaderImage from '../components/HeaderImage.vue';
+import FeatureList from '../components/FeatureList.vue';
 //import sample from './data';
 
 let model =
@@ -62,9 +64,11 @@ Vue.component('image-carousel', {
 var app = new Vue({ //configuration object
     el: '#app', //mount point (CSS selector)
     data: Object.assign(model, {
+        /*
         headerImageStyle: {
             'background-image': `url(${model.images[0]})`
         },
+        */
         contracted: true,
         //modalOpen: false
     }),
@@ -94,7 +98,9 @@ var app = new Vue({ //configuration object
     },*/
     components: {
         ImageCarousel,
-        ModalWindow
+        ModalWindow,
+        HeaderImage,
+        FeatureList
     },
     methods: {
         openModal() {

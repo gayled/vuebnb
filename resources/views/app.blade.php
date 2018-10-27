@@ -20,12 +20,18 @@
         <h1>vuebnb</h1>
     </div>
     <div id="app">
-        <!--Vue mount element-->
+        <!--Vue mount element
         <div class="header">
             <div class="header-img" :style="headerImageStyle" @click="openModal">
                 <button class="view-photos">View Photos</button>
             </div>
         </div>
+        -->
+        <header-image
+            :image-url="images[0]"
+            @header-clicked="openModal"
+        ></header-image>
+        
         <div class="container">
 
        <!-- <div id="modal" v-bind:class="{ show : modalOpen }">
@@ -44,34 +50,47 @@
             <p v-bind:class="{ contracted: contracted }">@{{ about }}</p>
             <button v-if="contracted" class="more" v-on:click="contracted = false">+ More</button>
         </div>
+       
         <div class="lists">
+             <!--
             <hr>
             <div class="amenities list">
                 <div class="title"><strong>Amenities</strong></div>
                 <div class="content">
-                    <div class="list-item" v-for="amenity in amenities">
-                        <i class="fa fa-lg" v-bind:class="amenity.icon"></i>
-                        <span>@{{ amenity.title }}</span>
-                    </div>
-                </div>
-            </div>
-            <hr>
+                -->
+            <feature-list title="Amenities" :items="amenities">
+                <template slot-scope="amenity">
+                <!--<div class="list-item" v-for="amenity in amenities">-->
+                    <i class="fa fa-lg" :class="amenity.icon"></i>
+                    <span>@{{ amenity.title }}</span>
+                <!--</div>-->
+                </template>
+            </feature-list>
+                    <!--
+                </div>                  
+            <hr>       
             <div class="prices list">
                 <div class="title">
                     <strong>Prices</strong>
                 </div>
                 <div class="content">
-                    <div class="list-item" v-for="price in prices">
+                     -->
+             <feature-list title="Prices" :items="prices"> 
+                 <template slot-scope="price">     
+                <!--<div class="list-item" v-for="price in prices">-->
                        @{{ price.title }}:<strong>@{{ price.value }}</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-       </div>
+                <!--</div>-->
+                </template> 
+            </feature-list> 
+        </div> <!--end lists div -->
+   <!-- </div>
+<div> -->
+        
+       </div> <!--end container div-->
        <modal-window ref="imagemodal">
            <image-carousel :images="images"></image-carousel>
        </modal-window>
-    </div>
+    </div> <!--end app div -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
