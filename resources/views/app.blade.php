@@ -15,9 +15,18 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 
     <div id="app">     
 
+=======
+    <div id="toolbar">
+        <img class="icon" src="{{ asset('images/logo.png') }}">
+        <h1>vuebnb</h1>
+    </div>
+    <div id="app">     
+
+>>>>>>> 206b8754449bd479f9b2756dcf1a9b36113cb18b
     </div> <!--end app div -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
