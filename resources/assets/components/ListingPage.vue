@@ -41,8 +41,14 @@
 </template>
 <script>
     import { populateAmenitiesAndPrices } from '../js/helpers';
+<<<<<<< HEAD
     let serverData = JSON.parse(window.vuebnb_server_data);
     let model = populateAmenitiesAndPrices(serverData.listing);
+=======
+    let model =
+        JSON.parse(window.vuebnb_listing_model);
+    model = populateAmenitiesAndPrices(model);
+>>>>>>> eae8963648ac8eb0c97600964d0167ecec9e97a8
 
     import ImageCarousel from './ImageCarousel.vue';
     import ModalWindow from './ModalWindow.vue';

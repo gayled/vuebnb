@@ -44,4 +44,10 @@ class ListingController extends Controller
 		
 		return view('app', ['data' => $data]);
 	}
+
+	public function get_home_web() 
+	{
+		return view('app', ['model' => []
+		]);
+	}
 }

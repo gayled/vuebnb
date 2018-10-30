@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
         <div v-for="(group, country) in listing_groups">
             <h1>Places in {{ country }}</h1>
@@ -31,3 +32,7 @@
 <style>
 
 </style>
+=======
+    <div>Vuebnb home page</div>
+</template>
+>>>>>>> eae8963648ac8eb0c97600964d0167ecec9e97a8
