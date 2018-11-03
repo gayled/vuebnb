@@ -1,6 +1,8 @@
 <template>
     <div class="home-container">
         <div v-for="(group, country) in listing_groups" class="listing-summary-group">
+    <div>
+        <div v-for="(group, country) in listing_groups">
             <h1>Places in {{ country }}</h1>
             <div class="listing-summaries">
                 <listing-summary
@@ -47,6 +49,10 @@
                    next(component => component.listing_groups = listing_groups);
                });
            }
+          return { listing_groups } 
+       },
+       components: {
+           ListingSummary
        }
    }
 </script>
@@ -80,3 +86,4 @@
         margin-right: 0;
     }
 </style>
+
