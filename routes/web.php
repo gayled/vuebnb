@@ -17,4 +17,6 @@ Route::get('/listing/{listing}', function (Listing $listing) {
     return view('app', [ 'model' => $model ]);
 });
 
+Route::get('/', 'ListingController@get_home_web');
+
 Route::get('/listing/{listing}', 'ListingController@get_listing_web');
