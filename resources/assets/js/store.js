@@ -5,12 +5,10 @@ Vue.use(Vuex);
 import router from './router';
 
 import axios from 'axios';
-
 axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest',
     'X-CSRF-TOKEN': window.csrf_token
 };
-
 
 export default new Vuex.Store({
     state: {
@@ -48,7 +46,7 @@ export default new Vuex.Store({
         toggleSaved({ commit, state }, id) {
             if (state.auth) {
                 //axios.post('/api/user/toggle_saved', { id }).then(
-                axios.post('api/user/toggle_saved', { id }).then(
+                axios.post('/api/user/toggle_saved', { id }).then(
                     () => commit('toggleSaved', id)
                 );
             } else {

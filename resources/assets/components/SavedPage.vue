@@ -13,7 +13,6 @@
 </template>
 <script>
     import ListingSummary from './ListingSummary.vue';
-
     export default {
         computed: {
             listings() {
