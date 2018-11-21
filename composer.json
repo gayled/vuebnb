@@ -50,7 +50,9 @@
             "@php artisan package:discover"
         ],
         "post-install-cmd": [
-            "@php artisan passport:install"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize",
+            "php artisan passport:install"
         ]
     },
     "config": {
